@@ -38,7 +38,7 @@ The project allows users to browse popular, upcoming, and top-rated movies, sear
 
 - HTML5
 - CSS3
-- Vanilla JavaScript
+- JavaScript
 - TMDb API
 - localStorage
 
