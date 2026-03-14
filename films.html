@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FilmFinder — Movies</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="movies">
+    <div class="site-shell">
+      <header class="site-header">
+        <nav class="container navbar" aria-label="Main navigation">
+          <a class="brand" href="index.html">FilmFinder</a>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">☰</button>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="films.html" aria-current="page">Movies</a></li>
+            <li><a href="profile.html">Profile <span id="fav-count">0</span></a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="site-main">
+        <section class="container page-heading compact">
+          <div>
+            <p class="eyebrow">Movie database</p>
+            <h1>Browse and filter movies</h1>
+            <p class="subtle">Search by title or narrow the list with genre, year and sorting.</p>
+          </div>
+        </section>
+
+        <section class="container filters-shell">
+          <div class="filters-grid">
+            <label class="search-field">
+              <span class="visually-hidden">Search by title</span>
+              <input id="search-input" type="search" placeholder="Search movie title..." />
+              <button class="search-embed-btn" id="search-btn" aria-label="Search">🔎</button>
+            </label>
+
+            <select id="genre-select" aria-label="Filter by genre">
+              <option value="">All genres</option>
+            </select>
+
+            <select id="year-select" aria-label="Filter by year">
+              <option value="">All years</option>
+            </select>
+
+            <select id="sort-select" aria-label="Sort movies">
+              <option value="popularity.desc">Most popular</option>
+              <option value="vote_average.desc">Top rated</option>
+              <option value="primary_release_date.desc">Newest first</option>
+              <option value="primary_release_date.asc">Oldest first</option>
+              <option value="title.asc">Title A–Z</option>
+              <option value="title.desc">Title Z–A</option>
+            </select>
+
+            <button class="btn secondary reset-btn" id="reset-btn">Reset filters</button>
+          </div>
+        </section>
+
+        <section class="container section-block tight-top">
+          <div class="catalog-summary">
+            <p id="results-summary">Loading movies...</p>
+          </div>
+          <div class="movie-grid" id="catalog-grid"></div>
+          <div class="empty-state hidden" id="catalog-empty">No movies found for the selected filters.</div>
+          <div class="pagination" id="pagination"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p>FilmFinder — movie discovery project powered by TMDb data.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

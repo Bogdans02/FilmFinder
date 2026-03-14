@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FilmFinder — Movie details</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="details">
+    <div class="site-shell">
+      <header class="site-header">
+        <nav class="container navbar" aria-label="Main navigation">
+          <a class="brand" href="index.html">FilmFinder</a>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">☰</button>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="films.html">Movies</a></li>
+            <li><a href="profile.html">Profile <span id="fav-count">0</span></a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="site-main">
+        <section class="movie-hero" id="detail-backdrop">
+          <div class="movie-hero-overlay">
+            <div class="container details-layout">
+              <a href="films.html" class="btn secondary back-btn">← Back to movies</a>
+              <div class="details-main">
+                <div class="details-poster-wrap">
+                  <img id="detail-poster" alt="Movie poster" />
+                </div>
+                <div class="details-copy">
+                  <p class="eyebrow" id="detail-kicker">Movie details</p>
+                  <h1 id="detail-title">Loading...</h1>
+                  <p class="detail-meta" id="detail-meta"></p>
+                  <p class="detail-description" id="detail-description"></p>
+                  <div class="details-actions-row">
+                    <button class="btn" id="toggle-favorite-btn">♡ Add to favorites</button>
+                    <a class="btn secondary hidden" id="trailer-link" target="_blank" rel="noreferrer">Watch trailer on YouTube</a>
+                  </div>
+                  <div class="rating-panel">
+                    <div>
+                      <h2>Your rating</h2>
+                      <p class="subtle">Click the stars to set or update your rating.</p>
+                    </div>
+                    <div class="stars" id="rating-stars"></div>
+                    <button class="text-action hidden" id="clear-rating-btn">Remove my rating</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container section-block">
+          <div class="section-head">
+            <h2>Trailer</h2>
+          </div>
+          <div class="video-frame hidden" id="trailer-frame-wrap">
+            <iframe id="detail-trailer" title="Movie trailer" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="empty-state hidden" id="no-trailer">Trailer is not available for this title.</div>
+        </section>
+
+        <section class="container section-block">
+          <div class="section-head">
+            <h2>More like this</h2>
+          </div>
+          <div class="movie-grid" id="similar-grid"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p>FilmFinder — movie discovery project powered by TMDb data.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

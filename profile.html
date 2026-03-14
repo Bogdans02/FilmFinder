@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FilmFinder — Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="profile">
+    <div class="site-shell">
+      <header class="site-header">
+        <nav class="container navbar" aria-label="Main navigation">
+          <a class="brand" href="index.html">FilmFinder</a>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">☰</button>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="films.html">Movies</a></li>
+            <li><a href="profile.html" aria-current="page">Profile <span id="fav-count">0</span></a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="site-main">
+        <section class="container page-heading">
+          <div>
+            <p class="eyebrow">Personal space</p>
+            <h1>Favorites and ratings</h1>
+            <p class="subtle">All your saved movies and ratings are stored locally in your browser.</p>
+          </div>
+        </section>
+
+        <section class="container section-block profile-shell">
+          <div class="profile-summary-card">
+            <div class="profile-avatar">BF</div>
+            <div>
+              <h2>Bohdan's profile</h2>
+              <p class="subtle">A simple local profile for your portfolio project.</p>
+            </div>
+            <div class="profile-stats">
+              <div><strong id="favorites-total">0</strong><span>Favorites</span></div>
+              <div><strong id="ratings-total">0</strong><span>Rated</span></div>
+            </div>
+          </div>
+
+          <div id="profile-grid" class="profile-movie-grid"></div>
+          <div class="empty-state hidden" id="profile-empty">You have no saved movies yet. Add favorites or rate something first.</div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p>FilmFinder — movie discovery project powered by TMDb data.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

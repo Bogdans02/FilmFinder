@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FilmFinder — Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="home">
+    <div class="site-shell">
+      <header class="site-header">
+        <nav class="container navbar" aria-label="Main navigation">
+          <a class="brand" href="index.html">FilmFinder</a>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">☰</button>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="films.html">Movies</a></li>
+            <li><a href="profile.html">Profile <span id="fav-count">0</span></a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="site-main">
+        <section class="hero hero-home">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">TMDb powered movie discovery</p>
+              <h1>Find films you actually want to watch.</h1>
+              <p class="hero-text">
+                Browse trending titles, explore upcoming releases, save favorites and rate movies in your personal profile.
+              </p>
+              <div class="hero-actions">
+                <a class="btn" href="films.html">Open movie database</a>
+                <a class="btn secondary" href="profile.html">My profile</a>
+              </div>
+            </div>
+            <div class="hero-showcase">
+              <div class="hero-slider-card" id="hero-slider-card">
+                <button class="slider-arrow left" id="hero-prev" aria-label="Previous movie">‹</button>
+                <div class="hero-slider-content" id="hero-slider-content"></div>
+                <button class="slider-arrow right" id="hero-next" aria-label="Next movie">›</button>
+              </div>
+              <div class="slider-dots" id="hero-dots"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container section-block">
+          <div class="section-head">
+            <h2>Popular right now</h2>
+            <a href="films.html">See all</a>
+          </div>
+          <div class="movie-grid" id="popular-grid"></div>
+        </section>
+
+        <section class="container section-block">
+          <div class="section-head">
+            <h2>Upcoming releases</h2>
+            <a href="films.html?sort=primary_release_date.desc">Explore releases</a>
+          </div>
+          <div class="movie-grid" id="upcoming-grid"></div>
+        </section>
+
+        <section class="container section-block">
+          <div class="section-head">
+            <h2>Top rated</h2>
+            <a href="films.html?sort=vote_average.desc">See ranking</a>
+          </div>
+          <div class="movie-grid" id="toprated-grid"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p>FilmFinder — movie discovery project powered by TMDb data.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

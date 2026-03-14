@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FilmFinder — About</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="about">
+    <div class="site-shell">
+      <header class="site-header">
+        <nav class="container navbar" aria-label="Main navigation">
+          <a class="brand" href="index.html">FilmFinder</a>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">☰</button>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="films.html">Movies</a></li>
+            <li><a href="profile.html">Profile <span id="fav-count">0</span></a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="site-main">
+        <section class="container about-hero">
+          <p class="eyebrow">About FilmFinder</p>
+          <h1>Your personal guide to the world of movies.</h1>
+          <p class="subtle large">
+            FilmFinder is a student portfolio project focused on movie discovery, personal collections and a clean browsing experience built with HTML, CSS and Vanilla JavaScript.
+          </p>
+        </section>
+
+        <section class="container about-grid section-block">
+          <article class="glass-card about-card">
+            <div class="icon-badge">🎯</div>
+            <h2>Mission</h2>
+            <p>
+              Make finding interesting movies simple through clear navigation, practical filters and handpicked sections like Popular, Upcoming and Top Rated.
+            </p>
+          </article>
+
+          <article class="glass-card about-card">
+            <div class="icon-badge">❤️</div>
+            <h2>Personalization</h2>
+            <p>
+              Users can save favorite titles, leave their own rating and keep everything together in a lightweight local profile.
+            </p>
+          </article>
+
+          <article class="glass-card about-card">
+            <div class="icon-badge">🎬</div>
+            <h2>Movie exploration</h2>
+            <p>
+              Detail pages collect the essential information: poster, overview, release date, genres, trailer and similar titles.
+            </p>
+          </article>
+        </section>
+
+        <section class="container section-block about-columns">
+          <div class="glass-card">
+            <h2>Main features</h2>
+            <ul class="feature-list">
+              <li>Interactive banner with trending movies</li>
+              <li>Movie catalog with search, genre, year and sorting</li>
+              <li>Detail page with trailer and similar recommendations</li>
+              <li>Favorites and ratings in a local profile</li>
+              <li>Responsive dark UI inspired by streaming platforms</li>
+            </ul>
+          </div>
+
+          <div class="glass-card">
+            <h2>Tech stack</h2>
+            <div class="tech-list">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>Vanilla JavaScript</span>
+              <span>TMDb API</span>
+              <span>localStorage</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="container section-block">
+          <div class="glass-card creator-card">
+            <div class="profile-avatar large">BM</div>
+            <div>
+              <h2>Created by Bohdan Manita</h2>
+              <p>
+                Computer science student building practical frontend projects and learning how to turn static layouts into dynamic web applications.
+              </p>
+              <a class="btn" href="films.html">Explore movies</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p>FilmFinder — movie discovery project powered by TMDb data.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
