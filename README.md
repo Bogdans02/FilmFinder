@@ -2,7 +2,7 @@
 
 Live Demo - https://bogdans02.github.io/FilmFinder/
 
-FilmFinder is a multi-page movie discovery web application built with **HTML**, **CSS**, and **Vanilla JavaScript**, using data from the **TMDb API**.
+FilmFinder is a multi-page movie discovery web application built with **HTML**, **CSS**, and **JavaScript**, using data from the **TMDb API**.
 
 The project allows users to browse popular, upcoming, and top-rated movies, search the movie database, filter results, open detailed movie pages, save favorites, and rate films in a personal profile.
 
